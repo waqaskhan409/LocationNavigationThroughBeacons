@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstScreen">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/beacons_searching"
+        android:layout_marginTop="80dp"
+        android:id="@+id/image"
+        ></ImageView>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/image"
+        android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="20dp"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center_vertical"
+        android:id="@+id/rssiLocation"
+        android:background="@drawable/searching_location"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="RSSI Location"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            >
+
+        </TextView>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_height="50dp"
+            android:src="@drawable/rssi"
+            >
+
+        </ImageView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center_vertical"
+        android:id="@+id/fieldTest"
+        android:background="@drawable/field_test_drawable"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Fields test"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            >
+
+        </TextView>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_height="50dp"
+            android:src="@drawable/field_test"
+            >
+
+        </ImageView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:id="@+id/allBeacons"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/all_beacons_drawable"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="All Beacons"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            >
+
+        </TextView>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_height="50dp"
+            android:src="@drawable/all_beacons"
+            >
+
+        </ImageView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/exit"
+        android:layout_marginRight="20dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/layout_bg"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Exit"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            >
+
+        </TextView>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_height="50dp"
+            android:src="@drawable/exit"
+            >
+
+        </ImageView>
+    </LinearLayout>
+
+</LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

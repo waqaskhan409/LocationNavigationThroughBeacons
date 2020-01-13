@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">PythonApi</string>
+    <string name="action_settings">Settings</string>
+    <string name="wap1">Enter b1 value</string>
+    <string name="wap2">Enter b2 value</string>
+    <string name="wap3">Enter b3 value</string>
+    <string name="wap4">Enter b4 value</string>
+    <string name="wap5">Enter b5 value</string>
+    <string name="wap6">Enter b6 value</string>
+    <string name="wap7">Enter b7 value</string>
+    <string name="empty_edit_text">Please fill this field</string>
+    <string name="predicted_result">Predicted results</string>
+    <string name="room">Coordinates number:</string>
+    <string name="predict">Predict</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="title_activity_location">LocationActivity</string>
+    <string name="get_room_object">room</string>
+    <string name="beacons">Beacons</string>
+    <string name="title_activity_beacons">All Beacons</string>
+    <string name="start_scanning">Start Scanning</string>
+    <string name="stop_scanning">Stop Scannings</string>
+
+
+    <string name="beacon1">b9407f30-f5f8-466e-aff9-25556b57fe6d</string>
+    <string name="beacon2">74278bda-b644-4520-8f0c-720eaf059935</string>
+    <string name="beacon3">e1f54e02-1e23-44e0-9c3d-512eb56adec9</string>
+    <string name="beacon4">74278bda-b644-4520-8f0c-720eaf059935</string>
+    <string name="beacon5">b9407f30-f5f8-466e-aff9-25556b57fe6d</string>
+    <string name="beacon6">e1f54e02-1e23-44e0-9c3d-512eb56adec9</string>
+    <string name="beacon7">e1f54e02-1e23-44e0-9c3d-512eb56adec9</string>
+<!--    <string name="beacon1">11111111-1111-1111-1111-111111111111</string>-->
+<!--    <string name="beacon2">22222222-2222-2222-2222-222222222222</string>-->
+<!--    <string name="beacon3">33333333-3333-3333-3333-333333333333</string>-->
+<!--    <string name="beacon4">44444444-4444-4444-4444-444444444444</string>-->
+<!--    <string name="beacon5">55555555-5555-5555-5555-555555555555</string>-->
+<!--    <string name="beacon6">66666666-6666-6666-6666-666666666666</string>-->
+<!--    <string name="beacon7">77777777-7777-7777-7777-777777777777</string>-->
+    <string name="team">Developed by Pavethran</string>
+    <string name="app_name_permanent">Beacons Locations</string>
+    <string name="title_activity_baecons_with_location_new_map">BaeconsWithLocationNewMap</string>
+
+
+</resources>

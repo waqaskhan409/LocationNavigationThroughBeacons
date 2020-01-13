@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/predicted_result"
+            android:textSize="22sp"
+            android:id="@+id/dialogueTitle"
+            android:textColor="@color/black"
+            ></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/room"
+            android:textSize="18sp"
+            android:layout_below="@+id/dialogueTitle"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/predictedRoom"
+            ></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_toRightOf="@+id/predictedRoom"
+            android:layout_below="@+id/dialogueTitle"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/predictedResult"
+            android:textColor="@color/black"
+            ></TextView>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/predictedResult"
+            android:background="@drawable/layout_bg"
+            android:layout_marginTop="20dp"
+            android:id="@+id/location"
+            android:text="Location"
+            ></Button>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
