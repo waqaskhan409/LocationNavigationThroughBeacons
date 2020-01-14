@@ -462,8 +462,7 @@ public class BaeconsWithLocationNewMap extends AppCompatActivity implements Beac
             @Override
             public void didRangeBeaconsInRegion(Collection<Beacon> beacons, Region region) {
                 if (beacons.size() > 0) {
-                    Log.i(TAG, "The first beacon I see is about "+beacons.iterator().next().getDistance()+" meters away.");
-                    Log.i(TAG, beacons.size() + "" + "");
+
                     try {
                         //Tells the BeaconService to start looking for beacons that match the passed Region object.
                         beaconManager.startMonitoringBeaconsInRegion(region);
@@ -531,7 +530,10 @@ public class BaeconsWithLocationNewMap extends AppCompatActivity implements Beac
                             sendDataForPrediction();
 
                         }
-                    } catch (RemoteException e) {    }
+                    } catch (RemoteException e) {
+                        e.printStackTrace();
+                        Log.d(TAG, "didRangeBeaconsInRegion: "+ e.getMessage());
+                    }
 
 
                 }

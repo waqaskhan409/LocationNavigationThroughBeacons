@@ -4,6 +4,7 @@ import android.bluetooth.BluetoothAdapter;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.RemoteException;
 import android.util.Log;
@@ -24,6 +25,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.pythonapi.R;
 import com.example.pythonapi.model.BeaconsProperties;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import org.altbeacon.beacon.Beacon;
 import org.altbeacon.beacon.BeaconConsumer;
@@ -39,6 +41,7 @@ import java.util.Collection;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import butterknife.Unbinder;
 
 /*
@@ -62,10 +65,15 @@ public class BeaconSearc extends AppCompatActivity implements BeaconConsumer {
     private ProgressBar pb;
     private double distance = 0;
     private TextView textView;
+    private Region mRegion;
 
 
     @BindView(R.id.toolbar)
     Toolbar toolbar;
+
+      @BindView(R.id.searchBeacons)
+      FloatingActionButton searchBeacons;
+
 
 
     @Override
@@ -100,6 +108,24 @@ public class BeaconSearc extends AppCompatActivity implements BeaconConsumer {
 
 
     }
+
+    @OnClick(R.id.searchBeacons)
+    public void searchBeacons(){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            if(searchBeacons.getDrawable() == getDrawable(R.drawable.play)){
+                searchBeacons.setImageDrawable(getDrawable(R.drawable.pause));
+                startBeaconListener();
+            }else {
+                searchBeacons.setImageDrawable(getDrawable(R.drawable.play));
+                try {
+                    beaconManager.stopRangingBeaconsInRegion(mRegion);
+                } catch (RemoteException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
     private void checkBluetooth() {
         BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
 
@@ -151,6 +177,7 @@ public class BeaconSearc extends AppCompatActivity implements BeaconConsumer {
             @Override
             public void didRangeBeaconsInRegion(Collection<Beacon> beacons, Region region) {
                 if (beacons.size() > 0) {
+                    mRegion = region;
                     Log.i(TAG, "The first beacon I see is about "+beacons.iterator().next().getDistance()+" meters away.");
                     Log.i(TAG, beacons.size() + "" + "");
 
