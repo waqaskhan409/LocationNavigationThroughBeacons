@@ -23,6 +23,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -49,6 +51,7 @@ public class BaeconsWithLocationNewMap extends AppCompatActivity implements Beac
     private static final String TAG = "BaeconsWithLocationNewM";
     private Unbinder unbinder;
     private ArrayList<BeaconsProperties> list = new ArrayList();
+    private ArrayList<String> models = new ArrayList();
     //Beacon Manager
     private BeaconManager beaconManager;
     private ProgressDialog dialog;
@@ -73,6 +76,14 @@ public class BaeconsWithLocationNewMap extends AppCompatActivity implements Beac
 
     @BindView(R.id.beacon7)
     TextView beacon7;
+    @BindView(R.id.beacon8)
+    TextView beacon8;
+    @BindView(R.id.beacon9)
+    TextView beacon9;
+    @BindView(R.id.beacons10)
+    TextView beacon10;
+    @BindView(R.id.beacons11)
+    TextView beacon11;
 
 
     @BindView(R.id.a1)
@@ -419,7 +430,8 @@ public class BaeconsWithLocationNewMap extends AppCompatActivity implements Beac
     @BindView(R.id.i50)
     TextView i50T;
 
-
+    @BindView(R.id.models)
+    Spinner model;
 
 
 
@@ -451,7 +463,20 @@ public class BaeconsWithLocationNewMap extends AppCompatActivity implements Beac
         list.add(new BeaconsProperties("","", "","","",""));
         list.add(new BeaconsProperties("","", "","","",""));
         list.add(new BeaconsProperties("","", "","","",""));
+        list.add(new BeaconsProperties("","", "","","",""));
+        list.add(new BeaconsProperties("","", "","","",""));
+        list.add(new BeaconsProperties("","", "","","",""));
+        list.add(new BeaconsProperties("","", "","","",""));
 
+        models.add("KNeighborsClassifier");
+        models.add("GaussianNB");
+        models.add("SVC");
+        models.add("DecisionTreeClassifier");
+        models.add("LinearDiscriminantAnalysis");
+
+        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, models);
+        model.setAdapter(adapter);
+        Log.d(TAG, "onCreate: position" + model.getSelectedItemPosition());
         startBeaconListener();
 
     }
@@ -524,6 +549,30 @@ public class BaeconsWithLocationNewMap extends AppCompatActivity implements Beac
                                 list.set(6, new BeaconsProperties(uuid, major, minor, String.valueOf(rssi), distance, "iBeacon"));
                                 if(beacon7 != null){
                                     beacon7.setText(String.valueOf(rssi));
+                                }
+                            }
+                            if(getString(R.string.beacon8).equals(uuid)){
+                                list.set(7, new BeaconsProperties(uuid, major, minor, String.valueOf(rssi), distance, "iBeacon"));
+                                if(beacon8 != null){
+                                    beacon8.setText(String.valueOf(rssi));
+                                }
+                            }
+                            if(getString(R.string.beacon9).equals(uuid)){
+                                list.set(8, new BeaconsProperties(uuid, major, minor, String.valueOf(rssi), distance, "iBeacon"));
+                                if(beacon9 != null){
+                                    beacon9.setText(String.valueOf(rssi));
+                                }
+                            }
+                            if(getString(R.string.beacon10).equals(uuid)){
+                                list.set(9, new BeaconsProperties(uuid, major, minor, String.valueOf(rssi), distance, "iBeacon"));
+                                if(beacon10 != null){
+                                    beacon10.setText(String.valueOf(rssi));
+                                }
+                            }
+                            if(getString(R.string.beacon11).equals(uuid)){
+                                list.set(10, new BeaconsProperties(uuid, major, minor, String.valueOf(rssi), distance, "iBeacon"));
+                                if(beacon11 != null){
+                                    beacon11.setText(String.valueOf(rssi));
                                 }
                             }
 
@@ -1270,7 +1319,9 @@ public class BaeconsWithLocationNewMap extends AppCompatActivity implements Beac
     }
     private void sendDataForPrediction() {
         JsonApiHolder service = RestApi.getApi();
-        String rssi1,rssi2, rssi3, rssi4, rssi5, rssi6, rssi7;
+        String rssi1,rssi2, rssi3, rssi4, rssi5, rssi6, rssi7, rssi8, rssi9, rssi10, rssi11, modelString;
+        modelString = String.valueOf(model.getSelectedItemPosition() + 1);
+        Log.d(TAG, "sendDataForPrediction: " + modelString);
         if(beacon1 != null){
             rssi1 = beacon1.getText().toString();
         }else{
@@ -1306,6 +1357,26 @@ public class BaeconsWithLocationNewMap extends AppCompatActivity implements Beac
         }else{
             rssi7 = "0";
         }
+        if(beacon8 != null){
+            rssi8 = beacon8.getText().toString();
+        }else{
+            rssi8 = "0";
+        }
+        if(beacon9 != null){
+            rssi9 = beacon9.getText().toString();
+        }else{
+            rssi9 = "0";
+        }
+        if(beacon10 != null){
+            rssi10 = beacon10.getText().toString();
+        }else{
+            rssi10 = "0";
+        }
+        if(beacon11 != null){
+            rssi11 = beacon11.getText().toString();
+        }else{
+            rssi11 = "0";
+        }
         if(rssi1.equals("B1")){
             rssi1 = "0";
         }
@@ -1324,8 +1395,20 @@ public class BaeconsWithLocationNewMap extends AppCompatActivity implements Beac
         if(rssi6.equals("B6")){
             rssi6 = "0";
         }
-        if(rssi6.equals("B7")){
+        if(rssi7.equals("B7")){
             rssi7 = "0";
+        }
+        if(rssi8.equals("B8")){
+            rssi8 = "0";
+        }
+        if(rssi9.equals("B9")){
+            rssi9 = "0";
+        }
+        if(rssi10.equals("B10")){
+            rssi10 = "0";
+        }
+        if(rssi11.equals("B11")){
+            rssi11 = "0";
         }
 
         Log.d(TAG, "sendDataForPrediction: " + rssi4);
@@ -1339,7 +1422,12 @@ public class BaeconsWithLocationNewMap extends AppCompatActivity implements Beac
                 rssi4,
                 rssi5,
                 rssi6,
-                rssi7
+                rssi7,
+                rssi8,
+                rssi9,
+                rssi10,
+                rssi11,
+                modelString
         );
         call.enqueue(new Callback<Room>() {
             @Override

@@ -71,8 +71,8 @@ public class BeaconSearc extends AppCompatActivity implements BeaconConsumer {
     @BindView(R.id.toolbar)
     Toolbar toolbar;
 
-      @BindView(R.id.searchBeacons)
-      FloatingActionButton searchBeacons;
+    @BindView(R.id.searchBeacons)
+    FloatingActionButton searchBeacons;
 
 
 
@@ -88,7 +88,7 @@ public class BeaconSearc extends AppCompatActivity implements BeaconConsumer {
         checkBluetooth();
 
         //getting beaconManager instance (object) for Main Activity class
-        startBeaconListener();
+//        startBeaconListener();
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -102,20 +102,26 @@ public class BeaconSearc extends AppCompatActivity implements BeaconConsumer {
 
         //Progress Bar
         pb = findViewById(R.id.pb);
+        pb.setVisibility(View.GONE);
 
 
         textView = findViewById(R.id.beacons);
 
 
     }
+    int i =0;
 
     @OnClick(R.id.searchBeacons)
     public void searchBeacons(){
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            if(searchBeacons.getDrawable() == getDrawable(R.drawable.play)){
+            if(i%2 == 0){
+                ++i;
                 searchBeacons.setImageDrawable(getDrawable(R.drawable.pause));
+                pb.setVisibility(View.VISIBLE);
                 startBeaconListener();
             }else {
+                ++i;
                 searchBeacons.setImageDrawable(getDrawable(R.drawable.play));
                 try {
                     beaconManager.stopRangingBeaconsInRegion(mRegion);

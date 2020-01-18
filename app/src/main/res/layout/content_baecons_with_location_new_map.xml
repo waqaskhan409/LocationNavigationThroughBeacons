@@ -9,7 +9,30 @@
     tools:context=".ui.BaeconsWithLocationNewMap"
     tools:showIn="@layout/activity_baecons_with_location_new_map">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:id="@+id/modelLayout"
+
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:text="Models : "></TextView>
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/models"></Spinner>
+
+    </LinearLayout>
+
     <HorizontalScrollView
+        android:layout_below="@id/modelLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <ScrollView
@@ -114,89 +137,94 @@
             android:layout_height="wrap_content">
             <TextView
                 android:layout_width="20dp"
-                android:layout_height="30dp"
+                android:layout_height="20dp"
                 android:gravity="center"
-                android:text=""
-                />
-            <TextView
-                android:layout_width="20dp"
-                android:layout_height="30dp"
-                android:gravity="center"
-                android:layout_marginLeft="20dp"
-                android:text=""
-                />
-
-            <TextView
-                android:layout_width="20dp"
-                android:layout_height="30dp"
-                android:gravity="center"
-                android:layout_marginLeft="20dp"
-                android:text=""
-                />
-
-            <TextView
-                android:layout_width="20dp"
-                android:layout_height="30dp"
-                android:gravity="center"
-                android:layout_marginLeft="20dp"
-                android:text=""
-                />
-
-            <TextView
-                android:layout_width="20dp"
-                android:layout_height="30dp"
-                android:gravity="center"
-                android:layout_marginLeft="20dp"
-                android:text=""
-                />
-
-            <TextView
-                android:layout_width="20dp"
-                android:layout_height="30dp"
-                android:gravity="center"
-                android:layout_marginLeft="20dp"
                 android:text="B1"
+                android:textColor="@color/white"
+
                 android:id="@+id/beacon1"
+                android:background="@drawable/circle_beacons_blue"
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                />
+
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                />
+
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                />
+
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                />
+
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+
+                />
+
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                />
+
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                />
+
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                />
+
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text="B8"
+                android:id="@+id/beacon8"
                 android:background="@drawable/circle_beacons"
-                />
-
-            <TextView
-                android:layout_width="20dp"
-                android:layout_height="30dp"
-                android:gravity="center"
-                android:layout_marginLeft="20dp"
-                android:text=""
-                />
-
-            <TextView
-                android:layout_width="20dp"
-                android:layout_height="30dp"
-                android:gravity="center"
-                android:layout_marginLeft="20dp"
-                android:text=""
-                />
-
-            <TextView
-                android:layout_width="20dp"
-                android:layout_height="30dp"
-                android:gravity="center"
-                android:layout_marginLeft="20dp"
-                android:text=""
-                />
-
-            <TextView
-                android:layout_width="20dp"
-                android:layout_height="30dp"
-                android:gravity="center"
-                android:layout_marginLeft="20dp"
-                android:text=""
-                />
-            <TextView
-                android:layout_width="20dp"
-                android:layout_height="30dp"
-                android:gravity="center"
-                android:layout_marginLeft="20dp"
-                android:text=""
                 />
         </LinearLayout>
         <LinearLayout
@@ -421,6 +449,83 @@
                 android:layout_marginLeft="20dp"
                 android:text="2"
                 />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text="B5"
+                android:textColor="@color/white"
+                android:id="@+id/beacon5"
+                android:background="@drawable/circle_beacons_blue"
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text="B6"
+                android:textColor="@color/white"
+
+                android:id="@+id/beacon6"
+                android:background="@drawable/circle_beacons_blue"
+                />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -473,12 +578,9 @@
             <TextView
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:gravity="center"
                 android:layout_marginLeft="20dp"
-                android:text="B2"
-                android:id="@+id/beacon2"
+                android:gravity="center"
 
-                android:background="@drawable/circle_beacons"
                 />
 
             <TextView
@@ -834,6 +936,77 @@
                 android:layout_marginLeft="20dp"
                 android:text="6"
                 />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text="B11"
+                android:id="@+id/beacons11"
+                android:background="@drawable/circle_beacons"
+                />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -935,6 +1108,77 @@
                 android:gravity="center"
                 android:layout_marginLeft="20dp"
                 android:text="7"
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text="WING C"
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+
                 />
         </LinearLayout>
         <LinearLayout
@@ -1448,6 +1692,81 @@
                 android:layout_marginLeft="20dp"
                 android:text="12"
                 />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text="B4"
+                android:textColor="@color/white"
+                android:id="@+id/beacon4"
+                android:background="@drawable/circle_beacons_blue"
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text="B10"
+                android:id="@+id/beacons10"
+                android:background="@drawable/circle_beacons"
+                />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -1753,6 +2072,78 @@
                 android:gravity="center"
                 android:layout_marginLeft="20dp"
                 android:text="15"
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text="B7"
+                android:textColor="@color/white"
+                android:id="@+id/beacon7"
+                android:background="@drawable/circle_beacons_blue"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text="CENTER"
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
                 />
         </LinearLayout>
         <LinearLayout
@@ -2273,11 +2664,8 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:gravity="center"
-                android:text="B3"
-                android:id="@+id/beacon3"
-
-                android:background="@drawable/circle_beacons"
-                />
+                android:text=""
+                   />
             <TextView
                 android:layout_width="20dp"
                 android:layout_height="20dp"
@@ -2367,9 +2755,6 @@
                 android:layout_height="20dp"
                 android:gravity="center"
                 android:layout_marginLeft="20dp"
-                android:background="@drawable/circle_beacons"
-                android:text="B6"
-                android:id="@+id/beacon6"
 
                 />
             <TextView
@@ -2788,6 +3173,16 @@
                 android:layout_height="20dp"
                 android:gravity="center"
                 android:layout_marginLeft="20dp"
+                android:id="@+id/beacon9"
+                android:background="@drawable/circle_beacons"
+
+
+                android:text="B9"
+                /><TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
                 android:text="25"
                 />
         </LinearLayout>
@@ -2799,9 +3194,7 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:gravity="center"
-                android:background="@drawable/circle_beacons"
-                android:text="B4"
-                android:id="@+id/beacon4"
+
                 />
             <TextView
                 android:layout_width="20dp"
@@ -2891,10 +3284,8 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:gravity="center"
-                android:id="@+id/beacon7"
                 android:layout_marginLeft="20dp"
-                android:background="@drawable/circle_beacons"
-                android:text="B7"
+
                 />
             <TextView
                 android:layout_width="20dp"
@@ -5371,9 +5762,13 @@
             android:layout_height="wrap_content">
             <TextView
                 android:layout_width="20dp"
-                android:layout_height="30dp"
+                android:layout_height="20dp"
                 android:gravity="center"
-                android:text=""
+                android:text="B2"
+                android:textColor="@color/white"
+
+                android:id="@+id/beacon2"
+                android:background="@drawable/circle_beacons_blue"
                 />
             <TextView
                 android:layout_width="20dp"
@@ -5420,9 +5815,7 @@
                 android:layout_height="30dp"
                 android:gravity="center"
                 android:layout_marginLeft="20dp"
-                android:text="B5"
-                android:id="@+id/beacon5"
-                android:background="@drawable/circle_beacons"
+
                 />
 
             <TextView
@@ -5450,10 +5843,13 @@
                 />
             <TextView
                 android:layout_width="20dp"
-                android:layout_height="30dp"
+                android:layout_height="20dp"
                 android:gravity="center"
                 android:layout_marginLeft="20dp"
-                android:text=""
+                android:text="B3"
+                android:textColor="@color/white"
+                android:id="@+id/beacon3"
+                android:background="@drawable/circle_beacons_blue"
                 />
         </LinearLayout>
         <LinearLayout

@@ -38,6 +38,11 @@ public interface JsonApiHolder {
             @Field("wap4") String wap4,
             @Field("wap5") String wap5,
             @Field("wap6") String wap6,
-            @Field("wap7") String wap7
+            @Field("wap7") String wap7,
+            @Field("wap8") String wap8,
+            @Field("wap9") String wap9,
+            @Field("wap10") String wap10,
+            @Field("wap11") String wap11,
+            @Field("model") String model
     );
 }
